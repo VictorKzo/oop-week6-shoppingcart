@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp57
+{
+    
+    
+    
+    class Checkout
+    {
+
+        List<Orange> oranges;
+        List<Apple> apples;
+        
+        public Checkout(List<Orange> orange, List<Apple> apple)
+        {
+            this.oranges = orange;
+            this.apples = apple;
+        }
+     
+        public double CalculatePrice()
+        {
+            double price = 0;
+            foreach (Orange orange in oranges)
+            {
+                price = price + 0.25;
+            }
+            foreach (Apple apple in apples)
+            {
+                price = price + 0.6;
+            }
+            return price;
+        }
+
+    }
+}
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp57
+{
+    class Orange
+    {
+        double price;
+        
+        public Orange(double price)
+        {
+            this.price = price;
+        }
+
+
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp57
+{
+    class Apple
+    {
+        double price;
+
+        public Apple(double price)
+        {
+            this.price = price;
+        }
+
+
+    }
+}
